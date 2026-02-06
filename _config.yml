@@ -15,10 +15,10 @@ timezone: Asia/Seoul
 # ↓ --------------------------
 
 # 블로그 제목을 넣어 줍니다. 아바타 바로 아래 큰 글씨로 표시됩니다
-title: 제목 영역 # the main title
+title: 점장이
 
 # title 아래에 작은 글씨로 부연설명을 넣을 수 있습니다
-tagline: 부연 설명 # it will display as the subtitle
+tagline: connecting the dots
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
@@ -31,8 +31,8 @@ url: 'https://tsseo.github.io'
 github:
   username: tsseo # 깃헛 아이디
 
-twitter:
-  username: twitter_username # change to your Twitter username
+# twitter:
+#   username:
 
 social:
   # Change to your full name.
