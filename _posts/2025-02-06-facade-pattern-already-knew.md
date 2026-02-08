@@ -3,13 +3,19 @@ title: "🤔 Facade? 그거 우리 회사에서 그냥 'ApiService'라고 불렀
 date: 2025-02-06 23:00:00 +0900
 categories: [Development, Architecture]
 tags: [facade, dip, tdd, layered-architecture, kotlin]
+image:
+  path: /assets/img/posts/2025-02-06-cover.jpg
 ---
 
 > **TL;DR** 💡 실무에서 쓰던 패턴에 이름이 있었다. 용어를 알고 나니 설명이 쉬워지고, 테스트도 쉬워졌다.
+{: .prompt-tip }
 
 ## 🤔 이미 하고 있었는데, 이름을 몰랐다
 
 부트캠프 과제로 User API를 구현하면서 Facade 패턴을 적용했다. 그런데 코드를 짜다 보니 이상하게 익숙했다.
+
+> **Facade**는 프랑스어로 "건물의 정면/외관"이라는 뜻이다. 건물 앞면은 깔끔해 보이지만, 뒤에는 복잡한 구조가 숨어있다. 디자인 패턴에서도 같은 의미로, 복잡한 서브시스템을 단순한 인터페이스로 감싸는 역할을 한다.
+{: .prompt-info }
 
 "어? 이거 회사에서 맨날 하던 건데?" 😅
 
@@ -32,6 +38,7 @@ tags: [facade, dip, tdd, layered-architecture, kotlin]
 지금은:
 
 > "이건 Facade예요. 복잡한 서브시스템을 단순한 인터페이스로 감싸는 거죠"
+{: .prompt-info }
 
 한 단어로 의도가 전달된다.
 
@@ -123,7 +130,8 @@ fun changePassword(loginId: String, loginPw: String, command: ChangePasswordComm
 ```
 {: file="UserFacade.kt" }
 
-`authenticate()`가 `@Transactional(readOnly = true)`라서, 반환된 User 엔티티가 Detached 상태가 됐다. 이후 `changePassword()`에서 수정해도 DB에 반영이 안 됐다.
+> `authenticate()`가 `@Transactional(readOnly = true)`라서, 반환된 User 엔티티가 Detached 상태가 됐다. 이후 `changePassword()`에서 수정해도 DB에 반영이 안 됐다.
+{: .prompt-warning }
 
 결국 Service 메서드 시그니처를 바꿔서 해결 ✅
 
@@ -142,7 +150,8 @@ fun changePassword(loginId: String, loginPw: String, command: ChangePasswordComm
 
 `findAndValidate()`는 `authenticate()`와 중복되지만, private 메서드로 추출해서 DRY 원칙은 지켰다.
 
-나중에 이벤트 기반으로 확장한다면 어떻게 해야 할지는 아직 모르겠다. 트랜잭션 경계를 어디에 둘지, 이벤트 발행 시점은 언제로 할지 등 고민이 더 필요할 것 같다.
+> 나중에 이벤트 기반으로 확장한다면 어떻게 해야 할지는 아직 모르겠다. 트랜잭션 경계를 어디에 둘지, 이벤트 발행 시점은 언제로 할지 등 고민이 더 필요할 것 같다.
+{: .prompt-info }
 
 ### 🔒 마스킹 로직 위치
 
@@ -187,9 +196,9 @@ fun maskedName(): String = if (name.length <= 1) "*" else name.dropLast(1) + "*"
 - 구조를 설명할 때 근거가 생겼다
 - "왜 이렇게 하는 거야?"에 대답할 수 있게 됐다
 
-이미 알던 것에 이름을 붙이니, 몰랐던 것들이 보이기 시작했다.
+> 이미 알던 것에 이름을 붙이니, 몰랐던 것들이 보이기 시작했다.
+{: .prompt-tip }
 
 다음에 누가 "Facade가 뭐야?"라고 물으면 이렇게 대답할 것 같다:
 
 > "여러 Service 조합해서 Controller에 전달하는 그 클래스 있잖아. 그거."
-
