@@ -1,6 +1,6 @@
 ---
 title: "👍 좋아요 버튼 누르는 건 1초, 설계하는 건 하루"
-date: 2025-02-13 23:00:00 +0900
+date: 2026-02-13 23:00:00 +0900
 categories: [Development, Architecture]
 tags: [e-commerce, like, soft-delete, idempotency, redis, kotlin]
 image:

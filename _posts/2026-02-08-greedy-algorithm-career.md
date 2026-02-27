@@ -1,6 +1,6 @@
 ---
 title: "🛤️ 일단 나아가면 보이는 것들"
-date: 2025-02-08 20:00:00 +0900
+date: 2026-02-08 20:00:00 +0900
 categories: [Career, Mindset]
 tags: [career, greedy-algorithm, networking, mindset]
 image:
