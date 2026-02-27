@@ -1,6 +1,6 @@
 ---
 title: "🏗️ 구현하고, 멘토링 듣고, 뜯어고치고, 또 멘토링 듣고 — 도메인 서비스가 뭔데"
-date: 2026-02-27 23:00:00 +0900
+date: 2026-02-27 00:00:00 +0900
 categories: [Development, Architecture]
 tags: [dip, layered-architecture, domain-service, clean-architecture, kotlin, refactoring]
 ---
