@@ -4,7 +4,7 @@ date: 2026-02-27 00:00:00 +0900
 categories: [Development, Architecture]
 tags: [dip, layered-architecture, domain-service, clean-architecture, kotlin, refactoring]
 image:
-  path: /assets/img/posts/compass-fog.jpg
+  path: /assets/img/posts/2026-02-27-cover.jpg
 ---
 
 > **TL;DR** 💡 Repository 분리하면 DIP 끝인 줄 알았다. 멘토링 두 번 듣고 나니 DTO 구조를 뜯어고쳤고, "도메인 서비스"의 정의부터 다시 헷갈린다. 아직 정리가 안 됐다. 그 과정을 기록한다.
