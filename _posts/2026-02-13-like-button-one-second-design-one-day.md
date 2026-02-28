@@ -1,10 +1,10 @@
 ---
 title: "👍 좋아요 버튼 누르는 건 1초, 설계하는 건 하루"
-date: 2026-02-13 23:00:00 +0900
+date: 2026-02-13 00:00:00 +0900
 categories: [Development, Architecture]
 tags: [e-commerce, like, soft-delete, idempotency, redis, kotlin]
 image:
-  path: /assets/img/posts/2025-02-13-cover.jpg
+  path: /assets/img/posts/2026-02-13-cover.jpg
 ---
 
 > **TL;DR** 💡 좋아요 기능을 설계하면서 삭제 전략, 중복 요청(따닥) 처리, 상품 상태 분리까지 고민이 꼬리를 물었다. '단순한 기능'은 없었다.

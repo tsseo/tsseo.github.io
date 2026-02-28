@@ -1,10 +1,10 @@
 ---
 title: "🤔 Facade? 그거 우리 회사에서 그냥 'ApiService'라고 불렀는데"
-date: 2026-02-06 23:00:00 +0900
+date: 2026-02-06 00:00:00 +0900
 categories: [Development, Architecture]
 tags: [facade, dip, tdd, layered-architecture, kotlin]
 image:
-  path: /assets/img/posts/2025-02-06-cover.jpg
+  path: /assets/img/posts/2026-02-06-cover.jpg
 ---
 
 > **TL;DR** 💡 실무에서 쓰던 패턴에 이름이 있었다. 용어를 알고 나니 설명이 쉬워지고, 테스트도 쉬워졌다.
