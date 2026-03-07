@@ -1,25 +1,25 @@
 /*
- * The syntax dark mode styles.
+ * The syntax dark mode styles — Dracula (IntelliJ custom)
  */
 
 @mixin dark-syntax {
-  --language-border-color: #2d2d2d;
-  --highlight-bg-color: #151515;
-  --highlighter-rouge-color: #c9def1;
-  --highlight-lineno-color: #808080;
-  --inline-code-bg: rgba(255, 255, 255, 0.05);
-  --code-color: #b0b0b0;
-  --code-header-text-color: #6a6a6a;
-  --code-header-muted-color: #353535;
-  --code-header-icon-color: #565656;
-  --clipboard-checked-color: #2bcc2b;
-  --filepath-text-color: #cacaca;
+  --language-border-color: #44475a;
+  --highlight-bg-color: #282a36;
+  --highlighter-rouge-color: #f8f8f2;
+  --highlight-lineno-color: #6272a4;
+  --inline-code-bg: rgba(255, 255, 255, 0.12);
+  --code-color: #f8f8f2;
+  --code-header-text-color: #6272a4;
+  --code-header-muted-color: #44475a;
+  --code-header-icon-color: #6272a4;
+  --clipboard-checked-color: #50fa7b;
+  --filepath-text-color: #f8f8f2;
 
   .highlight .gp {
-    color: #87939d;
+    color: #6272a4;
   }
 
-  /* --- Syntax highlight theme from `rougify style base16.dark` --- */
+  /* --- Dracula syntax highlight (from IntelliJ .icls) --- */
 
   .highlight table td {
     padding: 5px;
@@ -29,17 +29,20 @@
     margin: 0;
   }
 
+  /* 기본 텍스트 */
   .highlight,
   .highlight .w {
-    color: #d0d0d0;
-    background-color: #151515;
+    color: #f8f8f2;
+    background-color: #282a36;
   }
 
+  /* 에러 — 빨간 배경 제거 (Rouge가 백틱 함수명 등을 err로 잡음) */
   .highlight .err {
-    color: #151515;
-    background-color: #ac4142;
+    color: #f8f8f2;
+    background-color: transparent;
   }
 
+  /* 주석 — #ffc2c2 */
   .highlight .c,
   .highlight .ch,
   .highlight .cd,
@@ -47,106 +50,133 @@
   .highlight .cpf,
   .highlight .c1,
   .highlight .cs {
-    color: #848484;
+    color: #ffc2c2;
   }
 
+  /* 전처리기 */
   .highlight .cp {
-    color: #f4bf75;
+    color: #ff79c6;
   }
 
+  /* HTML/XML 태그 — 핑크 */
   .highlight .nt {
-    color: #f4bf75;
+    color: #ff79c6;
   }
 
+  /* 연산자 — 흰색 (DEFAULT_OPERATION_SIGN: ffffff) */
   .highlight .o,
   .highlight .ow {
-    color: #d0d0d0;
+    color: #ffffff;
   }
 
+  /* 구두점 */
   .highlight .p,
   .highlight .pi {
-    color: #d0d0d0;
+    color: #f8f8f2;
   }
 
+  /* diff 추가 */
   .highlight .gi {
-    color: #90a959;
+    color: #50fa7b;
   }
 
+  /* diff 삭제 */
   .highlight .gd {
-    color: #f08a8b;
-    background-color: #320000;
+    color: #ff5555;
+    background-color: #3b1c1c;
   }
 
   .highlight .gh {
-    color: #6a9fb5;
-    background-color: #151515;
+    color: #bd93f9;
+    background-color: #282a36;
     font-weight: bold;
   }
 
+  /* 키워드 — 핑크 (DEFAULT_KEYWORD: ff79c6) */
   .highlight .k,
   .highlight .kn,
   .highlight .kp,
   .highlight .kr,
   .highlight .kv {
-    color: #aa759f;
+    color: #ff79c6;
   }
 
+  /* 상수 키워드 (true, false, null) — 보라 볼드 (DEFAULT_CONSTANT: bd93f9 bold) */
   .highlight .kc {
-    color: #d28445;
+    color: #bd93f9;
+    font-weight: bold;
   }
 
+  /* 타입 (Long, Int, String) — 시안 (DEFAULT_CLASS_NAME: 8be9fd) */
   .highlight .kt {
-    color: #d28445;
+    color: #8be9fd;
   }
 
+  /* 선언 키워드 (fun, class, val) — 핑크 */
   .highlight .kd {
-    color: #d28445;
+    color: #ff79c6;
   }
 
+  /* 문자열 — 노랑 (DEFAULT_STRING: f1fa8c) */
   .highlight .s,
   .highlight .sb,
   .highlight .sc,
   .highlight .dl,
-  .highlight .sd,
   .highlight .s2,
   .highlight .sh,
   .highlight .sx,
   .highlight .s1 {
-    color: #90a959;
+    color: #f1fa8c;
+  }
+
+  /* doc 주석 문자열 — 연분홍 (DEFAULT_DOC_COMMENT: ffc2c2) */
+  .highlight .sd {
+    color: #ffc2c2;
   }
 
   .highlight .sa {
-    color: #aa759f;
+    color: #ff79c6;
   }
 
+  /* 정규식 */
   .highlight .sr {
-    color: #75b5aa;
+    color: #ff5555;
   }
 
+  /* 문자열 보간 */
   .highlight .si {
-    color: #b76d45;
+    color: #f1fa8c;
   }
 
+  /* 이스케이프 — 주황 (VALID_STRING_ESCAPE: ffb86c) */
   .highlight .se {
-    color: #b76d45;
+    color: #ffb86c;
   }
 
+  /* 네임스페이스 */
   .highlight .nn {
-    color: #f4bf75;
+    color: #f8f8f2;
   }
 
+  /* 클래스명 — 시안 (DEFAULT_CLASS_NAME: 8be9fd) */
   .highlight .nc {
-    color: #f4bf75;
+    color: #8be9fd;
   }
 
+  /* 상수 — 보라 볼드 (DEFAULT_CONSTANT: bd93f9 bold) */
   .highlight .no {
-    color: #f4bf75;
+    color: #bd93f9;
+    font-weight: bold;
   }
 
-  .highlight .na {
-    color: #6a9fb5;
+  /* 어노테이션/데코레이터 — 초록 이탤릭 (DEFAULT_METADATA: 50fa7b italic) */
+  .highlight .na,
+  .highlight .nd {
+    color: #50fa7b;
+    font-style: italic;
   }
 
+  /* 숫자 — 보라 (DEFAULT_NUMBER: bd93f9) */
   .highlight .m,
   .highlight .mb,
   .highlight .mf,
@@ -155,10 +185,45 @@
   .highlight .il,
   .highlight .mo,
   .highlight .mx {
-    color: #90a959;
+    color: #bd93f9;
   }
 
   .highlight .ss {
-    color: #90a959;
+    color: #f1fa8c;
+  }
+
+  /* 함수명 — 초록 (DEFAULT_FUNCTION: 50fa7b) */
+  .highlight .nf,
+  .highlight .fm {
+    color: #50fa7b;
+  }
+
+  /* 빌트인 — 시안 이탤릭 */
+  .highlight .nb {
+    color: #8be9fd;
+    font-style: italic;
+  }
+
+  .highlight .ni {
+    color: #f8f8f2;
+  }
+
+  /* 예외 클래스 — 시안 */
+  .highlight .ne {
+    color: #8be9fd;
+  }
+
+  /* 변수 — 주황 이탤릭 (DEFAULT_PARAMETER: ff6000 italic) */
+  .highlight .nv,
+  .highlight .vc,
+  .highlight .vg,
+  .highlight .vi {
+    color: #ff6000;
+    font-style: italic;
+  }
+
+  /* 인스턴스 필드 — 주황 (DEFAULT_INSTANCE_FIELD: ffb86c) */
+  .highlight .iv {
+    color: #ffb86c;
   }
 }

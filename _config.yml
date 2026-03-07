@@ -92,7 +92,7 @@ pageviews:
 #     dark — Use the dark color scheme
 #
 # 	원하는 테마 스킨을 선택합니다. 기본은 light입니다
-theme_mode: # [light | dark]
+theme_mode: dark
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
@@ -103,7 +103,7 @@ cdn:
 
 # the avatar on sidebar, support local or CORS resources
 # 블로그 왼쪽 상단에 표시될 나의 아바타 이미지를 설정합니다
-avatar:
+avatar: /assets/img/avatar.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
