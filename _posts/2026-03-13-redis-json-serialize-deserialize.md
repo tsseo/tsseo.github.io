@@ -3,8 +3,6 @@ title: "넣을 때는 마음대로였겠지만, 꺼낼 때는 아니란다 — R
 date: 2026-03-13 00:00:00 +0900
 categories: [Development, Architecture]
 tags: [redis, cache, serialization, json, kotlin, spring-boot, jackson]
-image:
-  path: /assets/img/posts/2026-03-13-cover.jpg
 ---
 
 > **TL;DR** 💡 Redis에 `@class` 없는 순수 JSON을 저장하고 싶었다. 저장은 됐는데 꺼내니까 `LinkedHashMap`이 나왔다. ThreadLocal로 해결하고, ZonedDateTime에 당하고, Page 역직렬화까지 — 전부 꺼내는 쪽 문제였다.
