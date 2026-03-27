@@ -3,9 +3,6 @@ title: "RabbitMQ만 쓰다가 Kafka를 만났다 — '전달'과 '적재'는 달
 date: 2026-03-27 00:00:00 +0900
 categories: [Development, Architecture]
 tags: [kafka, rabbitmq, outbox-pattern, event-driven, compensation, kotlin, spring-boot, e-commerce]
-image:
-  path: /assets/img/posts/2026-03-27-cover.jpg
-  alt: "메시지를 보내는 것과 쌓아두는 것은 다른 문제였다"
 ---
 
 > **TL;DR** 7주차 과제: 이벤트 기반 아키텍처 + Kafka. 회사에서 RabbitMQ만 쓰다가 Kafka를 처음 도입하면서, 둘의 차이가 "디스크에 저장하느냐"가 아니라 "소비 후에도 남아있느냐"라는 걸 깨달았다. 이 차이 하나가 Outbox 패턴, auto.offset.reset, 실패 보상 전략까지 전부 바꿔놓았다.
